@@ -5,6 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Analytics } from '@vercel/analytics/react';
 
 import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
@@ -26,6 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
